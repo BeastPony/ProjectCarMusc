@@ -1,0 +1,745 @@
+@font-face {
+  font-family: "ReformaGroteskReformaGroteskMedium";
+  src: url("../fonts/ReformaGroteskReformaGroteskMedium/ReformaGroteskReformaGroteskMedium.eot");
+  src: url("../fonts/ReformaGroteskReformaGroteskMedium/ReformaGroteskReformaGroteskMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ReformaGroteskReformaGroteskMedium/ReformaGroteskReformaGroteskMedium.woff")
+      format("woff"),
+    url("../fonts/ReformaGroteskReformaGroteskMedium/ReformaGroteskReformaGroteskMedium.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "ReformaGroteskReformaGroteskDemi";
+  src: url("../fonts/ReformaGroteskReformaGroteskDemi/ReformaGroteskReformaGroteskDemi.eot");
+  src: url("../fonts/ReformaGroteskReformaGroteskDemi/ReformaGroteskReformaGroteskDemi.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ReformaGroteskReformaGroteskDemi/ReformaGroteskReformaGroteskDemi.woff")
+      format("woff"),
+    url("../fonts/ReformaGroteskReformaGroteskDemi/ReformaGroteskReformaGroteskDemi.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ReformaGroteskReformaGroteskBold";
+  src: url("../fonts/ReformaGroteskReformaGroteskBold/ReformaGroteskReformaGroteskBold.eot");
+  src: url("../fonts/ReformaGroteskReformaGroteskBold/ReformaGroteskReformaGroteskBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ReformaGroteskReformaGroteskBold/ReformaGroteskReformaGroteskBold.woff")
+      format("woff"),
+    url("../fonts/ReformaGroteskReformaGroteskBold/ReformaGroteskReformaGroteskBold.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/**************Header*************/
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #1e1e1e;
+}
+
+header {
+  margin: 0 auto;
+  width: 1920px;
+  min-height: 900px;
+  background-image: url(/images/car-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.container {
+  width: 1920px;
+  min-height: 900px;
+  background: rgba(24, 24, 24, 0.8);
+}
+
+.nav__top {
+  display: flex;
+}
+
+.menu {
+  padding: 40px 725px 0 312px;
+  min-width: 521px;
+  height: 29px;
+}
+
+.menu ul {
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.menu ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "ReformaGrotesk";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.menu ul a:hover {
+  color: #db3138;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #db3138;
+  transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+/* .sp1,
+.sp3 {
+  margin-left: -10px;
+  transition: ease 0.7s;
+}
+
+.sp1:hover,
+.sp3:hover {
+  margin: 0;
+} */
+
+h1 {
+  margin: 0;
+  padding-top: 168px;
+  font-family: "ReformaGrotesk";
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 125%;
+  text-align: center;
+  color: #db3138;
+}
+
+h3 {
+  padding-top: 40px;
+  padding-bottom: 55px;
+  margin: 0 auto;
+  width: 437px;
+  height: 96px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.service {
+  padding: 15px 25px;
+  background: #db3138;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+.service:hover {
+  color: #db3138;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.contact {
+  margin-top: 103px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 214px;
+  justify-items: center;
+  align-items: center;
+}
+
+.address,
+.clock,
+.phone {
+  width: 640px;
+  height: 214px;
+  border: 1px solid #898989;
+}
+
+.contact h4 {
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.address p {
+  padding: 0 200px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #db3138;
+}
+
+.phone ul,
+a {
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #db3138;
+}
+
+.clock ul {
+  padding: 0;
+  list-style: none;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #db3138;
+}
+
+/***********main************/
+
+main {
+  margin-top: 184px;
+}
+
+/***********main-achive************/
+
+.achive {
+  margin: 0 auto;
+  display: flex;
+  width: 1296px;
+  height: 745px;
+}
+
+.achive__comment h2 {
+  width: 560px;
+  height: 146px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.achive__comment p {
+  margin-top: 60px;
+  width: 526px;
+  height: 116px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+/***********main-table************/
+
+.achive__place {
+  margin-left: 24px;
+  display: flex;
+  text-align: center;
+}
+
+.achive__tbl1,
+.achive__tbl2 {
+  border: 1px solid #898989;
+  width: 277px;
+  height: 44px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.achive__tbl2 {
+  margin-top: 40px;
+}
+
+/************SLIDER***********/
+
+.img__slider {
+  margin: 0 auto;
+  width: 1557.71px;
+  height: 420px;
+}
+
+.itc-slider {
+  display: flex;
+}
+
+.slider__items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.slider__items p {
+  margin: 0 auto;
+  position: relative;
+  top: -80px;
+  width: 286px;
+  height: 75px;
+  font-family: "ReformaGrotesk";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.slider-1,
+.slider-2,
+.slider-3 {
+  text-align: center;
+  width: 416px;
+  height: 420px;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+  z-index: 1;
+  position: relative;
+  top: -40px;
+}
+
+/***********Material**********/
+
+.material {
+  margin: 180px auto;
+  width: 1296px;
+  min-height: 662.43px;
+  display: flex;
+  gap: 134px;
+}
+
+.material__title img:nth-child(2) {
+  padding: 40px 0 40px 190px;
+}
+
+.material__title img:nth-child(4) {
+  padding: 40px 0 40px 190px;
+}
+
+.material__title h2 {
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.material__title h2 img {
+  padding-right: 36px;
+}
+
+.material__title p {
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.material__photo p {
+  margin-top: 50px;
+  padding: 0 100px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/***********our__service*********/
+
+.our__service {
+  margin: 0 auto;
+  width: 1296px;
+  min-height: 771px;
+  text-align: center;
+}
+
+.our__service h2 {
+  margin-bottom: 60px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.link {
+  margin-top: 60px;
+}
+
+.link a {
+  margin: 0 40px;
+  padding: 20px 40px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.link a:hover {
+  background: #db3138;
+  transition: all 0.5s;
+}
+
+.service__init {
+  margin-top: 80px;
+  width: 1296px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.service__init div {
+  border: 1px solid #898989;
+  width: 306px;
+  height: 428px;
+}
+
+.service__init img {
+  margin-top: 10px;
+  width: 60px;
+  height: 70px;
+}
+
+.service__init h3 {
+  width: auto;
+  height: auto;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.service__init p {
+  margin-bottom: 25px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.service__init a {
+  padding: 15px 25px;
+  background: #db3138;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+.service__init a:hover {
+  color: #db3138;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+/***********OUR WORK**********/
+
+.our__work {
+  margin: 0 auto;
+  width: 1920px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.our__work img {
+  margin-bottom: 60px;
+}
+
+/************Footer***********/
+footer {
+  margin-top: 60px;
+}
+
+.connect {
+  margin: 0 auto;
+  width: 750px;
+  min-height: 800px;
+}
+
+.connect .logo {
+  margin-left: 40%;
+}
+
+.connect h2 {
+  margin-bottom: 60px;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.connect .name {
+  margin: 60px 24px 24px 0;
+  padding-left: 25px;
+  width: 306px;
+  height: 47px;
+  background: none;
+  border: 1px solid #898989;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #898989;
+}
+
+.connect .name:hover {
+  color: #ffffff;
+  border: 1px solid #db3138;
+  transition: all 0.5s;
+}
+
+.connect .tel {
+  padding-left: 25px;
+  width: 306px;
+  height: 47px;
+  background: none;
+  border: 1px solid #898989;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #898989;
+}
+
+.connect .tel:hover {
+  color: #ffffff;
+  border: 1px solid #db3138;
+  transition: all 0.5s;
+}
+
+.connect .text {
+  padding: 25px 0 0 25px;
+  width: 526px;
+  height: 150px;
+  resize: none;
+  background: none;
+  border: 1px solid #898989;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #898989;
+}
+
+.connect .text:hover {
+  color: #ffffff;
+  border: 1px solid #db3138;
+  transition: all 0.5s;
+}
+
+.connect ul.list {
+  margin-left: 60px;
+  display: inline-block;
+  list-style: none;
+}
+
+.connect ul.list li {
+  margin-bottom: 21px;
+  width: 40px;
+  height: 40px;
+}
+
+.connect ul.list li:hover {
+  background: #db3138;
+  transition: all 0.5s;
+}
+
+.send {
+  padding: 15px 25px;
+  background: #db3138;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.send:hover {
+  color: #db3138;
+  background-color: #ffffff;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.call {
+  float: right;
+  display: inline-block;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+hr {
+  color: #898989;
+}
+
+.bottom {
+  margin: 0 auto;
+  width: 1920px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom p {
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.bottom ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-family: "ReformaGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
